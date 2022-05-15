@@ -1,6 +1,7 @@
 pages\BasePage.class
-tests\BaseTest.class
 pages\CourseCardPage.class
+tests\BaseTest.class
+pages\EventsPage.class
 pages\TestingCoursesPage.class
 tests\CheckCourseCountTest.class
 pages\MainPage.class
