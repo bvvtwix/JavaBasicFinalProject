@@ -7,6 +7,9 @@ import org.junit.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import wdFactory.BrowserModes;
+import wdFactory.BrowsersName;
+import wdFactory.WebDriverFactory;
 
 import java.time.Duration;
 
@@ -22,12 +25,14 @@ public abstract class BaseTest {
         }
     }
 
-    protected  void initDriver(String mode) {
+    protected  void initDriver() {
+        String browserName = System.getProperty("browser", BrowsersName.CHROME.toString());
+        String optionName = System.getProperty("option", BrowserModes.MAXIMAZE.toString());
+
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments(mode);
-        driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+        driver = WebDriverFactory.create(browserName, optionName);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
 }

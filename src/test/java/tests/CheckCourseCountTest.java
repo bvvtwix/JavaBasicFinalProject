@@ -1,6 +1,5 @@
 package tests;
 
-import data.BrowserModes;
 import org.junit.Ignore;
 import org.junit.Test;
 import pages.MainPage;
@@ -11,7 +10,7 @@ public class CheckCourseCountTest extends BaseTest {
 
         @Test
         public void сheckCourseCountInTestingTab() {
-            initDriver(BrowserModes.NOMODE.toString());
+            initDriver();
             new MainPage(driver)
                     .openOtusMainPage(cfg.urlOtus())
                     .openTestingCourses()
@@ -20,7 +19,7 @@ public class CheckCourseCountTest extends BaseTest {
 
         @Test
         public void checkCourseCard() {
-            initDriver(BrowserModes.NOMODE.toString());
+            initDriver();
             new MainPage(driver)
                     .openOtusMainPage(cfg.urlOtus())
                     .openTestingCourses()
@@ -30,7 +29,7 @@ public class CheckCourseCountTest extends BaseTest {
 
         @Ignore
         public void checkAllCourseCards() {
-            initDriver(BrowserModes.NOMODE.toString());
+            initDriver();
             new MainPage(driver)
                     .openOtusMainPage(cfg.urlOtus())
                     .openTestingCourses()
@@ -39,7 +38,7 @@ public class CheckCourseCountTest extends BaseTest {
 
         @Test
         public void eventsDateValidation() throws ParseException {
-            initDriver(BrowserModes.MAXIMAZE.toString());
+            initDriver();
             new MainPage(driver)
                     .openOtusMainPage(cfg.urlOtus())
                     .openEvensPage()
@@ -48,7 +47,7 @@ public class CheckCourseCountTest extends BaseTest {
 
         @Test
         public void checkSortEventByDOD() {
-            initDriver(BrowserModes.MAXIMAZE.toString());
+            initDriver();
             new MainPage(driver)
                     .openOtusMainPage(cfg.urlOtus())
                     .openEvensPage()

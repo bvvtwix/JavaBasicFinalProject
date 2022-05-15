@@ -1,11 +1,10 @@
-package data;
+package wdFactory;
 
 public enum BrowserModes {
 
     KIOSK("--kiosk"),
     HEADLESS("headless"),
-    MAXIMAZE("--start-maximized"),
-    NOMODE("test");
+    MAXIMAZE("--start-maximized");
 
     private String param;
 
