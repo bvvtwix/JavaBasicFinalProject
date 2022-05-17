@@ -20,6 +20,8 @@ public class EventsPage extends BasePage {
     WebElement dod;
     @FindBy(css = "div.dod_new-type__text")
     List<WebElement> dodEventsList;
+    @FindBy(css = "span.dod_new-online-translation__status-text")
+    WebElement onlineEvent;
 
     public EventsPage(WebDriver driver) {
         super(driver);
@@ -51,7 +53,11 @@ public class EventsPage extends BasePage {
     public EventsPage checkDodEventsType() {
 
         for (WebElement dodEvent : dodEventsList) {
-            Assert.assertEquals("Мероприятие не ДОД", "День открытых дверей", dodEvent.getText());
+            if (onlineEvent.getText().equals("Сейчас в эфире")) {
+                continue;
+            } else {
+                Assert.assertTrue("Мероприятие не ДОД",  dodEvent.getText() == "День открытых дверей");
+            }
         }
         return this;
     }

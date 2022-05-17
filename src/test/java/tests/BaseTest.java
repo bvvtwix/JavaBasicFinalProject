@@ -5,8 +5,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.After;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import wdFactory.BrowserModes;
 import wdFactory.BrowsersName;
 import wdFactory.WebDriverFactory;
@@ -15,7 +13,6 @@ import java.time.Duration;
 
 public abstract class BaseTest {
 
-    protected ConfigServer cfg = ConfigFactory.create(ConfigServer.class);
     protected WebDriver driver;
 
     @After

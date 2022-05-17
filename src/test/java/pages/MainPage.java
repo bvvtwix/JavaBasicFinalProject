@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import tests.BaseTest;
 
 public class MainPage extends BasePage {
 
@@ -23,8 +22,8 @@ public class MainPage extends BasePage {
         return new TestingCoursesPage(driver);
     }
 
-    public MainPage openOtusMainPage(String url) {
-        driver.get(url);
+    public MainPage openOtusMainPage() {
+        driver.get(cfg.urlOtus());
         return this;
     }
 

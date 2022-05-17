@@ -12,7 +12,7 @@ public class CheckCourseCountTest extends BaseTest {
         public void сheckCourseCountInTestingTab() {
             initDriver();
             new MainPage(driver)
-                    .openOtusMainPage(cfg.urlOtus())
+                    .openOtusMainPage()
                     .openTestingCourses()
                     .checkCoursesCount();
         }
@@ -21,7 +21,7 @@ public class CheckCourseCountTest extends BaseTest {
         public void checkCourseCard() {
             initDriver();
             new MainPage(driver)
-                    .openOtusMainPage(cfg.urlOtus())
+                    .openOtusMainPage()
                     .openTestingCourses()
                     .openCourseCard()
                     .checkCourseInfo();
@@ -31,7 +31,7 @@ public class CheckCourseCountTest extends BaseTest {
         public void checkAllCourseCards() {
             initDriver();
             new MainPage(driver)
-                    .openOtusMainPage(cfg.urlOtus())
+                    .openOtusMainPage()
                     .openTestingCourses()
                     .openAllCourseCards();
         }
@@ -40,7 +40,7 @@ public class CheckCourseCountTest extends BaseTest {
         public void eventsDateValidation() throws ParseException {
             initDriver();
             new MainPage(driver)
-                    .openOtusMainPage(cfg.urlOtus())
+                    .openOtusMainPage()
                     .openEvensPage()
                     .validateEventDates();
         }
@@ -49,7 +49,7 @@ public class CheckCourseCountTest extends BaseTest {
         public void checkSortEventByDOD() {
             initDriver();
             new MainPage(driver)
-                    .openOtusMainPage(cfg.urlOtus())
+                    .openOtusMainPage()
                     .openEvensPage()
                     .sortByDod()
                     .checkDodEventsType();
