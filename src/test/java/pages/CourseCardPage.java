@@ -21,11 +21,11 @@ public class CourseCardPage extends BasePage {
     }
 
     public void checkCourseInfo() {
-        Assert.assertTrue("Отсутствует название курса", courseName.getText().length() > 0);
-        Assert.assertTrue("Отсутствует описание курса", discription.getText().length() > 0);
+        Assert.assertTrue("Отсутствует название курса", !courseName.getText().isEmpty());
+        Assert.assertTrue("Отсутствует описание курса", !discription.getText().isEmpty());
 
         for (WebElement param : courseParams) {
-            Assert.assertTrue("Отсутствует параметр курса", param.getText().length() > 0);
+            Assert.assertTrue("Отсутствует параметр курса", !param.getText().isEmpty());
         }
     }
 }
